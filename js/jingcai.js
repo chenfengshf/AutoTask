@@ -15,6 +15,7 @@ let ReadArr = [], timebodyVal ="";
 let YouthBody = $.getdata('youth_autoread')||$.getdata("zqgetbody_body");
 let artsnum = 0, videosnum = 0;
 let videoscore = 0,readscore = 0;
+const RandNum = ()=>  parseInt(Math.random()*20)+30   //随机30,50秒
 if (isGetbody = typeof $request !==`undefined`) {
    Getbody();
    $done()
@@ -109,7 +110,7 @@ function AutoRead() {
         if($.index==ReadArr.length){
         $.log($.index+"次任务已全部完成，即将结束")
         } else {
-        await $.wait(20000);
+        await $.wait( RandNum()*1000 );
         }
       } else if (readres.error_code == '0' && data.indexOf('"score":0') > -1 && readres.items.score == 0) {
         console.log(`\n本次阅读获得0个金币，等待10s即将开始下次阅读\n`);
