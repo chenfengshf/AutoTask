@@ -50,7 +50,7 @@ if ($.isNode()) {
   // 上面执行完了所有账号，现在格式化导出
   console.log("直接复制以下所有内容到config.sh尾部就行")
   await pjCode(farmCode, "农场互助\nexport FRUITSHARECODES='")
-  await pjCode(farmCode, "种豆嘚豆\nexport PLANT_BEAN_SHARECODES='")
+  await pjCode(plantBeanCode, "种豆嘚豆\nexport PLANT_BEAN_SHARECODES='")
   await pjCode(cashCode, "签到领现金\nexport JD_CASH_SHARECODES='")
   await pjCode(sgmhCode, "闪购盲盒\nexport JDSGMH_SHARECODES='")
   await pjCode(jdPetList, "萌宠\nexport PETSHARECODES='")
