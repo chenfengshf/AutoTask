@@ -8,9 +8,11 @@ res = []
 for i in os.environ['JD_WSKEY'].split('&'):
     res.append(genToken(i))
 #print('updated', res)
+keys = [
+]
 
 #os.environ['JD_COOKIE']= '&'.join(res)
-text = ('export JD_COOKIE="{}"'.format('&'.join(res)) )
+text = ('export JD_COOKIE="{}"'.format('&'.join(keys+res)) )
 ws = 'export JD_WSKEY="{}"'.format(os.environ['JD_WSKEY'])
 
 print(text)
