@@ -121,6 +121,7 @@ class Task:
     
     def notify(self):
         '''推送相关'''
+        
         pass
 
 
