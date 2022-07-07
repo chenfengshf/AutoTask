@@ -1,4 +1,4 @@
-## author:未名
+## author:
 ## update_time:2021/7/1
 ## usage： *****
 
@@ -121,7 +121,7 @@ class Task:
     
     def notify(self):
         '''推送相关'''
-        
+
         pass
 
 
